@@ -63,4 +63,37 @@ function rotuloDoStatus(status) {
 }
 
 
+// EXERCÍCIO 3 - Compartilhamento de estado
+function SeletorTema({ alterarTema }) {
+  return(
+    <div>
+      <p>Selecione uma cor para o tema:</p>
+
+      <button onClick={() => alterarTema("azul")}>
+        Azul
+      </button>
+
+      <button onClick={() => alterarTema("verde")}>
+        Verde
+      </button>
+    </div>
+  )
+}
+
+function MostraTema({ tema }) {
+  const aparencia = {
+    backgroundColor: tema === "azul" ? "lightblue" : "lightgreen",
+    color: "#222",
+    padding: "15px",
+    marginTop: "10px"
+  }
+
+  return(
+    <div style={aparencia}>
+      <p>Tema escolhido: {tema}</p>
+    </div>
+  )
+}
+
+
 export default App;
