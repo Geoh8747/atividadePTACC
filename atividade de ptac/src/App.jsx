@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // COMPONENTE PRINCIPAL
 function App() {
   const [temaAtual, atualizarTema] = useState("azul");
@@ -29,5 +31,27 @@ function App() {
     </main>
   );
 }
-export default App;
 
+// EXERCÍCIO 1 - Notificações
+function Notificacao({ mensagens }) {
+  return(
+    <div>
+      {mensagens.length === 0 ? (
+        <p>Nenhuma notificação nova.</p>
+      ) : (
+        <p>
+          Você tem {mensagens.length}{" "}
+          {mensagens.length > 1
+            ? "notificações"
+            : "notificação"}.
+        </p>
+      )}
+    </div>
+  )
+}
+
+
+
+
+
+export default App;
