@@ -50,8 +50,17 @@ function Notificacao({ mensagens }) {
   )
 }
 
+// EXERCÍCIO 2 - Status do pedido
+function rotuloDoStatus(status) {
+  const nomes = {
+    pendente: "Pendente",
+    enviado: "Enviado",
+    entregue: "Entregue",
+    cancelado: "Cancelado"
+  }
 
-
+  return nomes[status] ?? "Status desconhecido"
+}
 
 
 export default App;
